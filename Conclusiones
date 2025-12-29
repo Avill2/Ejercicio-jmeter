@@ -1,0 +1,13 @@
+HALLAZGOS
+1.- Throughput = 20/s--> Cumple el requisito del ejercicio.
+2.- Average < 1500ms --> Signiica que el sistema reponde rapido porque en los resultado salio +- 300
+3.- Error 100% --> El valor es muy alto esto se debe a un fallo funcional, no de rendimiento, ya que los resultados arrojaron un codigo 401 que corresponde a credenciales invalidas.
+
+CONCLUSIONES
+La prueba de carga que se realizó permitio validar el comportamieto del servicio de autenticacion, con una carga constante de 20TPS. El tiempo de respuesta se mantuvo dentro del umbral permitido de 1.5s, esto demuetsra
+que tuvo buen rendimiento del servicio. Sin embargo el porcentaje de error supero el 3% permitido llegando a su totalidad de 100% y esto es debito a las respuestas HTTP401 que corresponde a credenciales invalidas. 
+Con esto podemos concluir que el servicio soporta adecuadamente la carga definida, pero requiere de datos reales para reducir los errores de autenticacion.
+
+RECOMENDACIONES
+-Validar credenciales reales para pruebas funcionales
+-Ejecutar pruebas de estres aumentando TPS
